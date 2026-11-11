@@ -20,7 +20,7 @@ public class BusquedaLineal {
         return null;
     }
     //Metodo para buscar la posicion de una persona,
-    //  retorne la posisicon de lapersona en cas de encontrar
+    //  retorne la posisicon de la persona en caso de encontrar
     //  y si no , retorna -1
     public int findPosByName(String name){
         for(Persona persona : personas){  //Complejidad O(n)2 porque indexOf hace otro recorrido internamente

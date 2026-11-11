@@ -1,5 +1,4 @@
 import java.util.List;
-
 import models.Persona;
 
 public class App {
@@ -33,5 +32,26 @@ public class App {
             }else{
                 System.out.println("Persona no encontrada");    
             }
+            //Busqueda Binaria
+            BusquedaBinaria busquedaB = new BusquedaBinaria(personas);
+            System.out.println("===== busqueda Binaria =====");
+            int resultado = busquedaB.findByName2("Ana");
+            if (resultado == -1)
+                System.out.println("Persona no Encotrada");
+            else{
+                System.out.println("La posicion de ana es " + resultado);
+            }
+            int res= busquedaB.findByName2("Pedro");
+            //Operador Ternario
+            System.out.println(res >= 0 ? "La posicion de ana es " + res: "No se encontro nada :( ");
+            System.out.println(" === EDAD ENCONTRADA === ");
+            //Buscar una persona con edad 25 y mostar en que posicion esta
+            
+            int res2= busquedaB.findByAge(25);
+            if(res2 == -1){
+                System.out.println("edad no Encontrada");
+            }else {
+                System.out.println("Se encontro una persona 25 en la pos " + res2 );
+        }
     }
 }
